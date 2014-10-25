@@ -1,0 +1,166 @@
+/* 
+* Navigation
+*/
+
+#navigation{
+	background:rgba(0, 0, 0, 0.5);
+	width:100%;
+	padding:10px;
+	position:fixed;
+	min-height:100px;
+	color:#FFF;
+	z-index:9999;
+}
+
+/*
+* #top-wrapper & content
+*/
+#top-wrapper{
+	height:500px;
+	 background: url(images/home_bkg2.jpg) no-repeat center -300px; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+}
+		#top-wrapper .content-box{
+			color:#777A7A;
+			width:100%;
+			min-height:100px;
+			background-color:#ECF0F1;
+			margin-bottom:5px;
+			box-shadow: 1px 1px 4px -1px black;
+		}
+			#top-wrapper .content-box.red{
+				background-color: #D86765;
+				color:#FFF;
+			}
+			#top-wrapper .content-box.yellow{
+				background-color:#f1c40f;
+				color:#FFF;
+			}
+			#top-wrapper .content-box.green{
+				background-color: #2EB266;
+				color:#FFF;
+			}
+
+				#top-wrapper .content-box .head{
+					background-color:rgba(0, 0, 0, 0.09);
+					padding:15px;
+					font-size:20px;
+				}
+				#top-wrapper .content-box .body{
+					padding:15px;
+				}
+				#top-wrapper .content-box table{
+					width:100%;
+					padding:15px;
+					border:none;
+				}
+				#top-wrapper .content-box table td{
+					padding:5px 15px;
+				}
+		#top-wrapper .content-right{
+			background-color: rgba(0, 0, 0, 0.2);
+			padding: 20px;
+		}
+
+		#top-wrapper .btn-red{
+			cursor:pointer;
+			background-color:#C0514E;
+			padding:10px;
+			display:block;
+			width:100%;
+			color:#FFF !important;
+			text-decoration:none;
+			text-align:center;
+			box-shadow: 1px 1px 4px -1px black;
+		}
+			#top-wrapper .btn-red:hover{
+				background-color:#B34340;
+			}
+		#top-wrapper .btn-green{
+			background-color:#269354;
+			padding:10px;
+			cursor:pointer;
+			width:100%;
+			color:#FFF !important;
+			text-decoration:none;
+			text-align:center;
+			display:block;
+			box-shadow: 1px 1px 4px -1px black;
+		}
+			#top-wrapper .btn-green:hover{
+				background-color:#22844B;
+				
+			}
+		#top-wrapper a{
+			color:#FFF;
+			text-decoration:none;
+		}
+		#top-wrapper .content-box a{
+			color:#D86765;
+		}
+		#top-wrapper h1, h2, h3, h4, h5, h6{
+			color:#FFF;
+			text-shadow:1px 1px black;
+		}
+
+/* 
+* Main Wrapper CSS
+*/
+#main-wrapper{
+	width:100%;
+}
+	#main-wrapper .top-banner{
+		background-color:#1F1F1F;
+		padding:5px;
+	}
+	#main-wrapper table{
+		margin-top:5px;
+	}
+	#main-wrapper table td{
+		line-height:30px;
+
+	}
+/* 
+* General CSS
+*/
+
+
+.container{
+width:80%;
+margin-left:auto;
+margin-right:auto;
+}
+
+body{
+	background-color: rgba(255, 255, 255, 0);
+}
+.bigtitle{
+	font-size:20px;
+}
+#navigation .bigtitle small{
+	color:#FFF;
+	padding-left:10px;
+}
+#wrapper {
+	margin:auto;
+	width:960px;
+}
+
+
+.clear {
+	clear: both;
+}
+
+.error {
+	padding: 0.75em;
+	margin: 0.75em;
+	border: 1px solid #990000;
+	max-width: 400px;
+	color: #990000;
+	background-color: #FDF0EB;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
