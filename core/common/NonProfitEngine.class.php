@@ -31,7 +31,7 @@
 
 		//Prepare SQL Statement 
 		$sql = "INSERT INTO `users_nonprofit` (`username`, `nonprofit_name`, `password`, `salt`, `email`, `commonname`, `user_title`, `nonprofit_age`, `tax_id`, `verified`, `nonprofit_classification`, `foundation_type`, `physicaladdress`)
-				VALUES ('$username', '$nonprofit_name', '$password', '$salt', '$email', '$commonname', '$user_title', '$nonprofit_age', '$tax_id', '$verified', '$nonprofit_classification', '$foundation_type', '$physicaladdress')";
+				VALUES ('$username', '$nonprofit_name', '$password', '$salt', '$email', '$commonname', '$user_title', '$nonprofit_age', '$tax_id', '$verified', '$nonprofit_classification', '$foundation_type', '$physical_address')";
 		if(DB::query($sql)){
 			return 2; //Perfecto
 		}else{
