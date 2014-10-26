@@ -82,15 +82,15 @@ body{
           <table class="table">
               <tr>
                 <td>Full Name: </td>
-                <td><input type="text" class="form-control" name="fullname" required placeholder="What do we call you?" /></td>
+                <td><input type="text" class="form-control" name="fullname" required placeholder="What do we call you?" value="<?php echo $fullname; ?>"/></td>
               </tr>
               <tr>
                 <td>Email: </td>
-                <td><input type="email" class="form-control" name="email" required placeholder="Where can we reach you?" /></td>
+                <td><input type="email" class="form-control" name="email" required placeholder="Where can we reach you?" value="<?php echo $email; ?>"/></td>
               </tr>
               <tr>
                 <td>Job Title/Position: </td>
-                <td><input type="text" class="form-control" name="position" required placeholder="How are you related to the company?" /></td>
+                <td><input type="text" class="form-control" name="position" required placeholder="How are you related to the company?" value="<?php echo $position; ?>"/></td>
               </tr>
           </table>
         </div>
@@ -116,19 +116,19 @@ body{
               </tr>
               <tr>
                 <td>Organization Name: </td>
-                <td><input type="text" id="organizationname" class="form-control" required name="organizationname" placeholder="What's it known as?" /></td>
+                <td><input type="text" id="organizationname" class="form-control" required name="organizationname" placeholder="What's it known as?" value="<?php echo $organizationname; ?>"/></td>
               </tr>
               <tr>
                 <td>Address: </td>
-                <td><input type="text" id="address" class="form-control" required name="address" placeholder="Where is the organization located?" /></td>
+                <td><input type="text" id="address" class="form-control" required name="address" placeholder="Where is the organization located?" value="<?php echo $address; ?>"/></td>
               </tr>
                <tr>
                 <td>Organization Type: </td>
-                <td><input type="text" id="organization_type" class="form-control" required name="organization_type" placeholder="What kind of organization is it?" /></td>
+                <td><input type="text" id="organization_type" class="form-control" required name="organization_type" placeholder="What kind of organization is it?" value="<?php echo $organization_type; ?>" /></td>
               </tr>
                <tr>
                 <td>Classification: </td>
-                <td><input type="text" id="classification" class="form-control" required name="classification" placeholder="How would you classify it? (eg. Medical Research, Religious, etc...)" /></td>
+                <td><input type="text" id="classification" class="form-control" required name="classification" placeholder="How would you classify it? (eg. Medical Research, Religious, etc...)" value="<?php echo $classification; ?>"/></td>
               </tr>
           </table>
         </div>
@@ -142,11 +142,11 @@ body{
           <table class="table">
               <tr>
                 <td>Desired Username: </td>
-                <td><input type="text" class="form-control" name="username" required placeholder="How you'll appear to others" /></td>
+                <td><input type="text" class="form-control" name="username" required value="<?php echo $username; ?>" placeholder="How you'll appear to others" /></td>
               </tr>
               <tr>
                 <td>Password: </td>
-                <td><input type="password" class="form-control" name="password" required placeholder="Shhh! It's a secret." /></td>
+                <td><input type="password" class="form-control" name="password" required value="<?php echo $password; ?>" placeholder="Shhh! It's a secret." /></td>
               </tr>
           </table>
         </div>
