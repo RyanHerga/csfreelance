@@ -107,7 +107,7 @@ body{
                 <td style="width:200px;">Tax ID: </td>
                 <td> 
                    <div class="input-group">
-                    <input type="text" id="taxid" class="form-control" name="tax_id" placeholder="9 Digit Tax ID Number" />
+                    <input type="text" id="taxid" class="form-control" name="tax_id" placeholder="9 Digit Tax ID Number" value="<?php echo $tax_id; ?>"/>
                     <span class="input-group-btn">
                       <button class="btn btn-success" type="button" onclick="doQuery();">FETCH</button>
                     </span>
