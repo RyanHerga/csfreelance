@@ -90,6 +90,38 @@
 			//Username doesn't exist.
 		}
 	}
+	/*
+	* Checks if user is logged
+	*/
+	public function logged(){
+		$sess_id = $_COOKIE['npsess'];
+		$sess_id = unserialize($sess_id);
+		//Gets session id for non-profits
+		if($sess_id != null || $sess_id != ""){
+			return true;
+		}
+		return false;
+	}
+
+	/*
+	* Gets logged in user information
+	*/
+	public function loginfo(){
+		$sess_id = $_COOKIE['npsess'];
+		$sess_id = unserialize($sess_id);
+		if($sess_id != null || $sess_id != ""){
+			NonProfitEngine::get_sess($sess_id);
+		}
+		return false;
+	}
+
+	private function get_sess($id){
+		$sql = "SELECT * FROM `users_nonprofit_sessions` WHERE `sess_id` = '$id'";
+		$uid = DB::get_row($sql)->user_id;
+
+		$sql = "SELECT * FROM `users_nonprofit` WHERE `id`='$uid'";
+		return DB::get_row($sql);
+	}
 
 	//Returns | 0 = Username doesn't exist, 1 = username exists.
 	private function checkUsernameExists($username){
