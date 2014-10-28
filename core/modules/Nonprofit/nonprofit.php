@@ -99,6 +99,7 @@
 		if($bool){
 			$uinfo = NonProfitEngine::loginfo();
 			$this->set('userinfo', $uinfo);
+			$this->render('nonprofit/profile_main.tpl')
 			//is logged in
 		}else{
 			MainController::Run('frontpage', 'index');
