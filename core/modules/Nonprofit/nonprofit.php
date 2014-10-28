@@ -89,5 +89,19 @@
 			$this->render('nonprofit/register.tpl');
 		}
 	}
-
+	/*
+	*	Control Panel for Non-Profit
+	*	
+	*/
+	public function cp(){
+		//Check if logged in
+		$bool = NonProfitEngine::logged();
+		if($bool){
+			$uinfo = NonProfitEngine::loginfo();
+			$this->set('userinfo', $uinfo);
+			//is logged in
+		}else{
+			MainController::Run('frontpage', 'index');
+		}
+	}
 }
