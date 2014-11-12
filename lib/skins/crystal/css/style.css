@@ -13,6 +13,36 @@
 }
 
 /*
+* Control Panel
+*/
+#menu{
+ 	margin-top:10px;
+}
+	#menu a.link{
+		border-right: 1px solid rgba(255, 255, 255, 0.07);
+		padding: 15px;
+		color:#FFF;
+		text-decoration:none;
+		cursor:pointer;
+	}
+		#menu a.link:first-child{
+			border-left: 1px solid rgba(255, 255, 255, 0.07);
+			border-right: 1px solid rgba(255, 255, 255, 0.07);
+		}
+		#menu a.link:hover{
+			text-decoration:none;
+			color:#FFF;
+			background-color:rgb(25, 25, 25);
+		}
+
+.cp-item{
+	background-color: rgb(240, 240, 240);
+	width:100%;
+	min-height:100px;
+	color:#FFF;
+	margin-bottom:5px;
+}
+/*
 * #top-wrapper & content
 */
 #top-wrapper{

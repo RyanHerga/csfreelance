@@ -26,7 +26,7 @@
 
 		//basic salt hash
 		$salt = md5(date('ydm'));
-		$newpass = md5($pass.$salt);
+		$newpass = md5($password.$salt);
 		$password = $newpass;
 
 		//Prepare SQL Statement 
@@ -99,8 +99,9 @@
 		//Gets session id for non-profits
 		if($sess_id != null || $sess_id != ""){
 			return true;
-		}
+		}else{
 		return false;
+	}
 	}
 
 	/*

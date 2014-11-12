@@ -94,14 +94,16 @@
 	*	
 	*/
 	public function cp(){
+		
 		//Check if logged in
 		$bool = NonProfitEngine::logged();
-		if($bool){
+		if($bool == true){
 			$uinfo = NonProfitEngine::loginfo();
 			$this->set('userinfo', $uinfo);
-			$this->render('nonprofit/profile_main.tpl')
+			$this->render('nonprofit/profile_main.tpl');
 			//is logged in
 		}else{
+			
 			MainController::Run('frontpage', 'index');
 		}
 	}
