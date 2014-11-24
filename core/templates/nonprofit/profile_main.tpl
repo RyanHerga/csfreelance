@@ -1,3 +1,6 @@
+<pre>
+<?php print_r(get_defined_vars()); ?>
+</pre>
 <div id="top-wrapper" style="height:100px;">
   <div id="navigation">
     <div class="container">
@@ -26,6 +29,32 @@
         </div>
         <div class="col-md-8 col-lg-8">
             <div class="cp-item">
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                      <ul class="nav nav-tabs ">
+                        <li class="active">
+                          <a href="#tab_current_projects" data-toggle="tab"> Projects </a>
+                        </li>
+                        <li>
+                          <a href="#tab_messages" data-toggle="tab"> Mailbox </a>
+                        </li>
+                        <li>
+                          <a href="#tab_companysheet" data-toggle="tab"> Company Sheet </a>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="tab_current_projects">
+                         
+                        </div>
+                        <div class="tab-pane" id="tab_messages">
+                          
+                        </div>
+                        <div class="tab-pane" id="tab_companysheet">
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
             </div>
         </div>

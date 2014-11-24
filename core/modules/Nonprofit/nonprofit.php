@@ -94,16 +94,18 @@
 	*	
 	*/
 	public function cp(){
-		
 		//Check if logged in
+		NonProfitEngine::login('ryan', 'demo1234');
 		$bool = NonProfitEngine::logged();
 		if($bool == true){
 			$uinfo = NonProfitEngine::loginfo();
 			$this->set('userinfo', $uinfo);
+			$projects = ProjectEngine::getProjects();
+			$this->set('projects', $projects);
 			$this->render('nonprofit/profile_main.tpl');
 			//is logged in
 		}else{
-			
+			//user not logged in
 			MainController::Run('frontpage', 'index');
 		}
 	}
