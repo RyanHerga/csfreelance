@@ -119,6 +119,7 @@
 	}
 	#main-wrapper table{
 		margin-top:5px;
+		color:#000;
 	}
 	#main-wrapper table td{
 		line-height:30px;
@@ -165,3 +166,4 @@ body{
 	-moz-border-radius: 0.5em;
 	-webkit-border-radius: 0.5em;
 }
+

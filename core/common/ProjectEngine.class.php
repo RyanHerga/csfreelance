@@ -126,6 +126,14 @@
 		$sql = "SELECT * FROM `project_apps` WHERE `project_id`='$pid'";
 		return DB::get_results($sql);
 	}
+	
+	/*
+	* Deletes an appplication for a specific project
+	*/
+	public function deleteApplication($aid){
+		$sql = "DELETE FROM `project_apps` WHERE `id`='$aid'";
+		return DB::query($sql);
+	}
 
 	/*
 	* Change status of project to 2(Awarded)
@@ -144,7 +152,6 @@
 			return 0; //Issue somewhere
 		}
 	}
-
 
 
 

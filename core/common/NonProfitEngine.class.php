@@ -90,6 +90,21 @@
 			//Username doesn't exist.
 		}
 	}
+
+	/*
+	* Updates Company Details, with passed id
+	*/
+	public function updateNonprofit($nonprofit_name, $foundation_type, $physical_address, $nonprofit_classification, $description){
+		$physical_address = Util::cleanString($physical_address);
+		$nonprofit_classification = Util::cleanString($nonprofit_classification);
+		$description = Util::cleanString($description);
+		$id = NonProfitEngine::logInfo()->id;
+		$sql = "UPDATE FROM `users_nonprofit` SET `nonprofit_name`='$nonprofit_name',
+				`foundation_type`='$foundatio_type', `physical_address`='$physical_address',
+				`nonprofit_classification`='$nonprofit_classification', `description`='$descriotion' WHERE `id`='$id'";
+		return DB::query($sql);
+	}
+	
 	/*
 	* Checks if user is logged
 	*/
@@ -111,7 +126,7 @@
 		$sess_id = $_COOKIE['npsess'];
 		$sess_id = unserialize($sess_id);
 		if($sess_id != null || $sess_id != ""){
-			NonProfitEngine::get_sess($sess_id);
+			return NonProfitEngine::get_sess($sess_id);
 		}
 		return false;
 	}

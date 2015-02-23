@@ -10,7 +10,8 @@
  * To change it, copy the line into this file here, for the
  * settings to take effect
  *
- */
+*/
+
 define('DBASE_USER', 'root');
 define('DBASE_PASS', '');
 define('DBASE_NAME', 'csfreelance');

@@ -39,8 +39,9 @@
 	background-color: rgb(240, 240, 240);
 	width:100%;
 	min-height:100px;
-	color:#FFF;
+	color:#000;
 	margin-bottom:5px;
+	padding:10px;
 }
 /*
 * #top-wrapper & content
@@ -131,7 +132,7 @@
 		#top-wrapper .content-box a{
 			color:#D86765;
 		}
-		#top-wrapper h1, h2, h3, h4, h5, h6{
+		#top-wrapper > h1, h2, h3, h4, h5, h6{
 			color:#FFF;
 			text-shadow:1px 1px black;
 		}
@@ -141,6 +142,7 @@
 */
 #main-wrapper{
 	width:100%;
+	color:#000;
 }
 	#main-wrapper .top-banner{
 		background-color:#1F1F1F;
@@ -281,4 +283,7 @@ Licensed under MIT
   border-top: 0;
   border-bottom: 1px solid #eee;
   padding-bottom: 15px;
+}
+.table{
+	color:#000;
 }

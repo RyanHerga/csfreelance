@@ -90,23 +90,97 @@
 		}
 	}
 	/*
-	*	Control Panel for Non-Profit
-	*	
+	*	Control Panel for Non-Profits
 	*/
 	public function cp(){
 		//Check if logged in
-		NonProfitEngine::login('ryan', 'demo1234');
+		//NonProfitEngine::login('ryan', 'demo1234');
 		$bool = NonProfitEngine::logged();
 		if($bool == true){
+			if($this->post->action == 'editDetails'){
+				//On edit details, forward it to database
+				$details_edited = NonProfitEngine::updateNonprofit($this->post->nonprofit_name, $this->post->foundation_type, $this->post->physical_address, $this->post->nonprofit_classification, $this->post->description);
+				if($details_edited == 1){
+					echo '<script>
+					window.onload = function() {
+						 swal("Done", "Your information has been modified", "success");
+					};
+					</script>';
+				}else{
+					echo '<script>
+					window.onload = function() {
+						 swal("Oh no!", "Something went wrong with updating the details. We\'ve got our best looking at the problem.", "error");
+					};
+					</script>';
+				}
+			}
 			$uinfo = NonProfitEngine::loginfo();
 			$this->set('userinfo', $uinfo);
 			$projects = ProjectEngine::getProjects();
 			$this->set('projects', $projects);
 			$this->render('nonprofit/profile_main.tpl');
+
 			//is logged in
 		}else{
 			//user not logged in
 			MainController::Run('frontpage', 'index');
 		}
 	}
+
+	public function messages($submodule = '', $post = ''){
+		$bool = NonProfitEngine::logged();
+		if($bool == true){
+			//Checks actions for messages
+			if($this->post->action == 'newTopic'){
+				$topiciscreated = MessageEngine::createNewMessageTopic($this->post->receiver_type, $this->post->receiver_id, $this->post->title, $this->post->message);
+				//Message sent alert
+				if($topiciscreated==1){
+					echo '<script>
+					window.onload = function() {
+						 swal("Sent", "The message has been sent, succesfully!", "success");
+					};
+					</script>';
+				}else{
+					echo '<script>
+					window.onload = function() {
+						 swal("Oh no!", "Something went wrong with your message. It didn\'t go through", "error");
+					};
+					</script>';
+				}
+			}elseif($this->post->action == 'newMessage'){
+				$messageiscreated = MessageEngine::postMessage($this->post->topic_id, $this->post->message);
+				//Message sent alert
+				if($messageiscreated==1){
+					echo '<script>
+					window.onload = function() {
+						 swal("Sent", "The message has been sent, succesfully!", "success");
+					};
+					</script>';
+				}else{
+					echo '<script>
+					window.onload = function() {
+						 swal("Oh no!", "Something went wrong with your message. It didn\'t go through", "error");
+					};
+					</script>';
+				}
+			}
+			$uinfo = NonProfitEngine::loginfo();
+			$this->set('userinfo', $uinfo);
+
+			//Render the appropriate page based on the submodule
+			if($submodule == 'new'){
+				$this->render('nonprofit/mailbox_new.tpl');
+			}elseif($submodule == 'read'){
+				$this->set('posts', MessageEngine::loadPostsForTopic($post));
+				$this->render('nonprofit/mailbox_read.tpl');
+			}else{
+				//Default list all messages
+				$this->set('messages', MessageEngine::loadTopicsForUser($uinfo->id));
+				$this->render('nonprofit/mailbox.tpl');
+			}
+
+		}
+	}
+
+	
 }

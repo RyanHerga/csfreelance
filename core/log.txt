@@ -1,0 +1,17 @@
+/*
+* Log for week of 12/1/2014
+*/
+
+ -> Compiled a list of actor contact information, and aided in the organization of the roles being played[Monday]
+ -> Developed my individual project[Tuesday]
+ -> Aided in running through the play[Wednesday]
+
+/*
+* Log for week of 12/8/2014
+*/
+
+-> Aided in the rehearsal, and staging of the Musical Perfomance
+-> Hour of Code Stream
+-> Progressed the Messaging Backend/Frontend systen of the Individual Project
+-> Designed GUI for Senior Project
+-> Applied API to convert sound into simple data types, outputting the frequency
